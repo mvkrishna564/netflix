@@ -1,0 +1,37 @@
+.movie-row {
+  margin-bottom: 48px;
+  padding: 0 4%;
+  position: relative;
+}
+
+.movie-row__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.movie-row:hover .movie-row__title {
+  color: white;
+}
+
+.movie-row__slider {
+  position: relative;
+  overflow: visible;
+}
+
+.movie-row__track {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 80px;
+  margin-bottom: -80px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.movie-row__track::-webkit-scrollbar {
+  display: none;
+}

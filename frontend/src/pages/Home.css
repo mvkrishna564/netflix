@@ -1,0 +1,18 @@
+.home {
+  background: var(--bg-dark);
+  min-height: 100vh;
+}
+
+.home__content {
+  position: relative;
+  z-index: 2;
+  margin-top: -120px;
+  padding-bottom: 60px;
+}
+
+.home__empty {
+  padding: 80px 4%;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}

@@ -1,0 +1,112 @@
+.search-page {
+  background: var(--bg-dark);
+  min-height: 100vh;
+}
+
+.search-page__content {
+  padding: 100px 4% 60px;
+}
+
+.search-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.search-page__header h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.search-page__input-wrap input {
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  width: 320px;
+  transition: all 0.2s;
+}
+
+.search-page__input-wrap input:focus {
+  outline: none;
+  border-color: white;
+  background: rgba(255,255,255,0.15);
+}
+
+.search-page__input-wrap input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.search-page__loading {
+  text-align: center;
+  padding: 80px;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.search-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.search-page__card {
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-page__card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.search-page__card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.search-page__card-info {
+  padding: 12px;
+}
+
+.search-page__card-info h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-page__card-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.search-page__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .search-page__input-wrap input { width: 100%; }
+  .search-page__header { flex-direction: column; align-items: flex-start; }
+  .search-page__grid { grid-template-columns: repeat(2, 1fr); }
+}

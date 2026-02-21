@@ -1,0 +1,133 @@
+.watch {
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.watch--loading {
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255,255,255,0.1);
+  border-top-color: var(--netflix-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.watch__back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s;
+}
+
+.watch__back:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.watch__player {
+  width: 100%;
+  position: relative;
+  background: #000;
+}
+
+.watch__video {
+  width: 100%;
+  max-height: 80vh;
+  display: block;
+}
+
+.watch__iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  display: block;
+}
+
+.watch__placeholder {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.watch__placeholder-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.watch__placeholder-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px) brightness(0.4);
+}
+
+.watch__placeholder-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watch__placeholder-text {
+  text-align: center;
+  padding: 40px;
+}
+
+.watch__placeholder-text h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.watch__placeholder-text p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.watch__info {
+  padding: 40px 4%;
+  max-width: 900px;
+}
+
+.watch__info h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.watch__meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.watch__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
