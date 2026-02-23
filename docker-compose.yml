@@ -1,4 +1,4 @@
-version: '3.8'
+docker-compose updocker-compose upversion: '3.8'
 
 services:
   mongodb:
@@ -10,6 +10,11 @@ services:
     volumes:
       - mongo-data:/data/db
     environment:
+      # MONGO_INITDB_DATABASE: Specifies the name of the database to be created and initialized
+      # when the MongoDB container starts for the first time.
+      # Used by: MongoDB official Docker image during initial setup
+      # Value: 'netflix-clone' - the name of the primary database for the Netflix clone application
+      # Reference: https://hub.docker.com/_/mongo
       MONGO_INITDB_DATABASE: netflix-clone
 
   backend:
