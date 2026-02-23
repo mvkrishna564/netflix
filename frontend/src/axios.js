@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || '/api',
+  baseURL: 'https://netflix-38kc.onrender.com/api',
 });
 
 // Add auth token to every request
