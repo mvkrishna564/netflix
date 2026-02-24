@@ -4,7 +4,7 @@ const Movie = require('../models/Movie');
 const { protect, admin } = require('../middleware/auth');
 
 // @route GET /api/movies - Get all movies (admin) or random movie
-router.get('/', protect, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { type, genre } = req.query;
     let query = {};
