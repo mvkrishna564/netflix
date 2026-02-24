@@ -9,8 +9,8 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://netflix-clone-zeta-silk.vercel.app', 'https://netflix-1-hgr3pf3y1-mvkrishna564s-projects.vercel.app'],
-  credentials: true
+  origin: '*',
+  credentials: false
 }));
 app.use(express.json());
 
